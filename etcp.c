@@ -90,7 +90,7 @@ SOCKET tcp_client(const char* hname,const char* sname , struct sockaddr_in* peer
 	if (connect(s, (struct sockaddr*)peer, sizeof(*peer)))
 	{
 		/* code */
-		error(1, 0, "connect failed");
+		error(1, error, "connect failed");
 	}
 	return s;
 }
